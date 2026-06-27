@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drift UI Tabs</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="canvas">
+
+        <!-- Background -->
+        <div class="background"></div>
+
+        <!-- TAB BAR -->
+        <div class="tabspanel">
+            <button class="tab active" data-tab="setup">SETUP</button>
+            <button class="tab" data-tab="tires">TIRES</button>
+            <button class="tab" data-tab="gearing">GEARING</button>
+            <button class="tab" data-tab="alignment">ALIGNMENT</button>
+            <button class="tab" data-tab="antiroll">ANTIROLL</button>
+            <button class="tab" data-tab="springs">SPRINGS</button>
+            <button class="tab" data-tab="damping">DAMPING</button>
+            <button class="tab" data-tab="aero">AERO</button>
+            <button class="tab" data-tab="brakes">BRAKES</button>
+            <button class="tab" data-tab="diff">DIFF</button>
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="tabcontent active" id="setup">
+            <div class="panel">
+                <h2>Setup</h2>
+            </div>
+
+            <div class="panel2">
+                <label for="compound">Tire Compound</label>
+                <select id="compound">
+                    <option>Standard</option>
+                    <option>Snow</option>
+                </select>
+            </div>
+
+            <div class="panel2">
+                <label for="weight">Front Weight %</label>
+                <input id="weight" type="number" value="0">
+            </div>
+
+            <div class="panel2">
+                <label>Front Spring</label>
+
+                <div class="panel3">
+                    <span>Lowest</span>
+                    <input id="frontSpringLow" type="number" value="0">
+
+                    <span>Highest</span>
+                    <input id="frontSpringHigh" type="number" value="0">
+                </div>
+            </div>
+
+            <div class="panel2">
+                <label>Rear Spring</label>
+
+                <div class="panel3">
+                    <span>Lowest</span>
+                    <input id="rearSpringLow" type="number" value="0">
+
+                    <span>Highest</span>
+                    <input id="rearSpringHigh" type="number" value="0">
+                </div>
+            </div>
+
+            <div class="actionButtons">
+                <button class="saveButton">Generate Tune</button>
+            </div>
+        </div>
+
+  
+        <div class="tabcontent" id="tires">
+            <div class="panel"><h2>Tire Pressure</h2></div>
+
+            <div class="panel2">
+                <label>Front</label>
+                <input id="tireFront" type="number" value="0">
+            </div>
+
+            <div class="panel2">
+                <label>Rear</label>
+                <input id="tireRear" type="number" value="0">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="gearing">
+            <div class="panel"><h2>Gearing</h2></div>
+            <div class="panel2"><label>Final Drive</label></div>
+            <div class="panel2"><label>1st</label></div>
+            <div class="panel2"><label>2nd</label></div>
+            <div class="panel2"><label>3rd</label></div>
+            <div class="panel2"><label>4th</label></div>
+            <div class="panel2"><label>5th</label></div>
+            <div class="panel2"><label>6th</label></div>
+        </div>
+
+        <div class="tabcontent" id="alignment">
+            <div class="panel"><h2>Alignment</h2></div>
+
+            <div class="panel2">
+                <label>Front Camber</label>
+                <input id="frontcamber" type="number" value="0">
+            </div>
+            <div class="panel2">
+                <label>Rear Camber</label>
+                <input id="rearcamber" type="number" value="0">
+            </div>
+            <div class="panel2">
+                <label>Front Toe</label>
+                <input id="fronttoe" type="number" value="0">
+            </div>
+            <div class="panel2">
+                <label>Rear Toe</label>
+                <input id="reartoe" type="number" value="0">
+            </div>
+            <div class="panel2">
+                <label>Caster</label>
+                <input id="caster" type="number" value="0">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="antiroll">
+            <div class="panel"><h2>Antiroll Bars</h2></div>
+            <div class="panel2">
+                <label>Front</label>
+                <input id="frontantiroll" type="number" value="0">
+            </div>
+            <div class="panel2">
+                <label>Rear</label>
+                <input id="rearantiroll" type="number" value="0">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="springs">
+            <div class="panel"><h2>Springs</h2></div>
+            <div class="panel2">
+                <label>Front</label>
+                <input id="frontsprings" type="number" value="0">
+            </div>
+            <div class="panel2">
+                <label>Rear</label>
+                <input id="rearsprings" type="number" value="0">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="damping">
+            <div class="panel"><h2>Damping</h2></div>
+
+            <div class="panel2">
+                <label>Rebound Front</label>
+                <input id="reboundFront" type="number" value="0">
+            </div>
+
+            <div class="panel2">
+                <label>Rebound Rear</label>
+                <input id="reboundRear" type="number" value="0">
+            </div>
+
+            <div class="panel2">
+                <label>Bump Front</label>
+                <input id="bumpFront" type="number" value="0">
+            </div>
+
+            <div class="panel2">
+                <label>Bump Rear</label>
+                <input id="bumpRear" type="number" value="0">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="aero">
+            <div class="panel"><h2>Aero</h2></div>
+
+            <div class="panel2">
+                <label>Front Downforce</label>
+                <input id="frontDownforce" type="number" value="0">
+            </div>
+
+            <div class="panel2">
+                <label>Rear Downforce</label>
+                <input id="rearDownforce" type="number" value="0">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="brakes">
+            <div class="panel"><h2>Brakes</h2></div>
+
+            <div class="panel2">
+                <label>Balance</label>
+                <input id="brakeBalance" type="number" value="0">
+            </div>
+
+            <div class="panel2">
+                <label>Pressure</label>
+                <input id="brakePressure" type="number" value="0">
+            </div>
+        </div>
+
+        <div class="tabcontent" id="diff">
+            <div class="panel"><h2>Differential</h2></div>
+
+            <div class="panel2">
+                <label>Acceleration</label>
+                <input id="diffAccel" type="number" value="0">
+            </div>
+
+            <div class="panel2">
+                <label>Deceleration</label>
+                <input id="diffDecel" type="number" value="0">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
