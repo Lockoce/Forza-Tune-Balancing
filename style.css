@@ -27,7 +27,7 @@ body {
 .background {
     position: absolute;
     inset: 0;
-    background: url("background2.png") no-repeat center;
+    background: url("Background2.png") no-repeat center;
     background-size: cover;
     filter: blur(8px) brightness(0.75);
     transform: scale(1.08);
